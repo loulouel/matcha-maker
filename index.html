@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Maak je eigen matcha</h1>
+    </header>
+
+    <div id="start-screen" class="screen">
+        <img src="images/matcha.png" alt="Matcha afbeelding" class="matcha-image">
+        <button id="start-button">Klik om te beginnen</button>
+    </div>
+
+
+    <div id="main-screen" class="screen hidden">
+        <div id="content" class="content">
+            <div id="milk-options" class="options">
+                <p>Soort melk:</p>
+                <img src="images/milk.png" alt="Koemelk" class="option-image" data-option="koe">
+
+                <img src="images/amandelmelk.png" alt="Amandelmelk" class="option-image" data-option="amandel">
+
+                <img src="images/havermelk.png" alt="Havermelk" class="option-image" data-option="haver">
+
+            </div>
+            <div id="topping-options" class="options hidden">
+                <p>Soort topping:</p>
+                <img src="images/strawberry.png" alt="Aardbei" class="option-image" data-option="aardbei">
+                <img src="images/mango.png" alt="Mango" class="option-image" data-option="mango">
+                <img src="images/blueberry.png" alt="Bosbes" class="option-image" data-option="bosbes">
+            </div>
+            <div id="temperature-options" class="options hidden">
+                <p>Temperatuur:</p>
+                <button class="option-button" data-option="warm">Warm</button>
+                <button class="option-button" data-option="koud"> koud</button>
+            </div>
+        </div>
+        <div id="dialogue-box" class="hidden">
+            <p id="dialogue-text"></p>
+        </div>
+        <div id="matcha-display">
+            <p id="matcha-message" class="hidden">Hier is je matcha!</p>
+            <div id="matcha-images">
+                <img id="warm-matcha" src="images/warm-matcha.png" alt="Warm Matcha" class="matcha-image hidden">
+                <img id="iced-matcha" src="images/iced-matcha.png" alt="Iced Matcha" class="matcha-image hidden">
+            </div>
+        </div>
+
+        <audio id="background-music" loop>
+            <source src="geluid/cafe-sounds.mp3" alt="cafe-sounds">
+        </audio>
+
+        <script src="index.js"></script>
+</body>
+
+</html>

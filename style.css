@@ -1,0 +1,130 @@
+
+* {
+    background-image: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url("images/cafe.jpg");
+
+}
+
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: aliceblue;
+}
+
+h1 {
+    position: absolute;
+    top: 8em;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px black;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+#start-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#start-button:hover {
+    background-color: #337c37;
+}
+
+.content {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.option-image {
+    width: 6em; 
+    margin: 2em;
+    cursor: pointer;
+}
+
+.option-button {
+    margin: 5px;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.dialogue-box {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1em;
+    width: 300px;
+    text-align: center;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+
+.options-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+#matcha-display {
+    text-align: center;
+    margin-top: 20px; /* Ruimte boven de matcha-afbeeldingen */
+}
+
+#matcha-display img {
+    max-width: 100%;
+}
+
+.matcha-image {
+    max-width: 10em;
+    margin-bottom: 10px;
+}
+
+/* Aanpassingen voor de warme en iced matcha-afbeeldingen */
+#warm-matcha {
+    width: 15em; /* Aanpassen naar gewenste grootte */
+}
+
+#iced-matcha {
+    width: 15em; /* Aanpassen naar gewenste grootte */
+}
