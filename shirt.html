@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link href="styles/style.css" rel="stylesheet">
+	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+
+
+	<header class="header">
+		<!-- Hamburger Menu Icon -->
+		<button id="hamburger" class="hamburger" aria-label="Menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+
+		<div class="logo">
+			<a href="index.html"> <!-- Link to your homepage-->
+				<img src="images/svg--logo.svg" alt="Logo"> <!-- Include an image for the logo -->
+			</a>
+		</div>
+
+		<a href="https://mrmen.com/cart" class="cart">
+			<img src="images/3721818.png" alt="Cart">
+		</a>
+	</header>
+
+	<!-- Slide-out menu -->
+	<nav id="sidebar">
+		<!-- Exit Cross -->
+		<button id="close-btn">&times;</button>
+
+		<!-- Search Bar -->
+		<div class="search-bar">
+			<input type="text" placeholder="Search...">
+			<button type="submit" class="search-btn">🔍</button>
+		</div>
+
+		<!-- Navigation Links -->
+		<ul class="menu-list">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Characters</a></li>
+			<li><a href="#">Shop</a></li>
+			<li><a href="#">Free Printables</a></li>
+			<li><a href="#">Quiz</a></li>
+			<li><a href="#">Discover You</a></li>
+		</ul>
+	</nav>
+
+	<main>
+
+		<h3 id="DarkModetext">Dark Mode is OFF</h3>
+		<button onclick="darkMode()">Darkmode</button>
+		<button onclick="lightMode()">LightMode</button>
+
+		<div class="font-size-controls">
+			<button onclick="increaseFontSize()">Increase Font Size</button>
+			<button onclick="decreaseFontSize()">Decrease Font Size</button>
+		</div>
+
+		<!-- for light/dark mode, I got the code from this website: https://www.geeksforgeeks.org/how-to-make-dark-mode-for-websites-using-html-css-javascript/-->
+
+		<div class="audio-container">
+			<audio controls src="geluid/song.mp3"></audio>
+		</div>
+
+		<!-- Placeholder for the name at the top -->
+		<!--Help from chat gpt:  Asked Chat gpt how to do this with the prompt: How do I make it so that when you fill in your name in the text box, it automatically updates elsewhere in the text?-->
+		<input type="text" required placeholder="YOUR NAME" oninput="updateName()" id="name-input">
+
+		<!-- Display text for MR. YOUR NAME and signature -->
+		<div id="personalisation-display">
+			<h2>MR. <span id="name-placeholder">YOUR NAME</span></h2>
+			<img src="images/roger-sig.svg" alt="Roger Hargreaves">
+		</div>
+
+		<!-- Character image -->
+		<img src="images/svg--character--mr-strong.svg" alt="Mr. Strong" id="character-image">
+
+		<!-- Main Image Display -->
+		<div id="image-container">
+			<img src="images/Mrstrong.webp" alt="main" id="main-image">
+			<p>Click on the image to zoom</p>
+		</div>
+
+
+		<!-- Thumbnails -->
+		<div class="thumbnail-container">
+			<img src="images/Mrstrong.webp" alt="thumbnail" class="selected">
+			<img src="images/MRSTRONG-LIFE_130x.avif" alt="thumbnail">
+			<img src="images/MRSTRONG_TSHIRTBLACK_130x.avif" alt="thumbnail">
+			<img src="images/MRSTRONG_TSHIRTGREY_130x.webp" alt="thumbnail">
+			<img src="images/MRSTRONG_TSHIRTBLUE_130x.avif" alt="thumbnail">
+			<img src="images/MRSTRONG_TSHIRTGREEN_130x.avif" alt="thumbnail">
+		</div>
+
+		<section>
+			<h3>Choose Size:</h3>
+			<div class="size-buttons">
+				<button type="button" onclick="selectSize('Kids S (3-4 Years)')" id="kids-s">Kids S (3-4 Years)</button>
+				<button type="button" onclick="selectSize('Kids M (5-6 Years)')" id="kids-m">Kids M (5-6 Years)</button>
+				<button type="button" onclick="selectSize('Kids L (7-8 Years)')" id="kids-l">Kids L (7-8 Years)</button>
+				<button type="button" onclick="selectSize('Kids XL (9-10 Years)')" id="kids-xl">Kids XL (9-10
+					Years)</button>
+				<button type="button" onclick="selectSize('Adults S')" id="adults-s">Adults S</button>
+				<button type="button" onclick="selectSize('Adults M')" id="adults-m">Adults M</button>
+				<button type="button" onclick="selectSize('Adults L')" id="adults-l">Adults L</button>
+				<button type="button" onclick="selectSize('Adults XL')" id="adults-xl">Adults XL</button>
+				<button type="button" onclick="selectSize('Adults XXL')" id="adults-xxl">Adults XXL</button>
+			</div>
+		</section>
+
+		<section>
+			<h3>Choose Color:</h3>
+			<form>
+				<button type="button" onclick="changeColor('white')">White</button>
+				<button type="button" onclick="changeColor('black')">Black</button>
+				<button type="button" onclick="changeColor('grey')">Grey</button>
+				<button type="button" onclick="changeColor('blue')">Blue</button>
+				<button type="button" onclick="changeColor('green')">Green</button>
+			</form>
+		</section>
+
+		<section>
+			<p><strong>Price:</strong> <div id="price">€24,95</span></p>
+
+			<label for="quantity"><strong>Quantity:</strong></label>
+			<button type="button" onclick="changeQuantity(-1)">−</button>
+			<input type="number" id="quantity" value="1" min="1" max="99" readonly>
+			<button type="button" onclick="changeQuantity(1)">+</button>
+
+			<!-- Name Input -->
+			<label for="name"><strong>Name:</strong></label>
+			<input type="text" id="name" maxlength="40" placeholder="YOUR NAME">
+
+			<p>up to 40 characters</p>
+
+			<!-- Add to Cart Button -->
+			<button id="addToCart">Add to cart</button>
+		</section>
+
+
+		<article>
+			<h2>Description</h2>
+			<p>
+				Mr. Strong is the strongest person in the whole world. Strong by name, solid as a rock, mighty! He is so
+				strong
+				he can not only bend an iron bar, but he can tie knots in it!
+			</p>
+			<p>
+				White T-shirt. Iron on reverse. Wash inside-out at low temperature.
+			</p>
+			<p>
+				Adult Chest Sizes: S 34/36" - M 38/40" - L 42/44" - XL 46/48" - 2XL 50/52"
+			</p>
+		</article>
+
+		<article>
+			<h2>Personalisation</h2>
+			<ul>
+				<li>
+					<p>This item will be personalised exactly as you have written, so please double-check spelling,
+						punctuation, and use of capital letters.</p>
+				</li>
+				<li>
+					<p>Do not include accents, special symbols, or emojis, as some of our processes will not allow this.
+					</p>
+				</li>
+				<li>
+					<p>Personalised products can only be returned if they are faulty.</p>
+				</li>
+			</ul>
+		</article>
+
+		<section>
+			<h2>You may also like</h2>
+			<div class="product-grid">
+				<div class="product-item">
+					<img src="images/LMPRINCESS_400x.webp" alt="photo little Miss Princess T-Shirt">
+					<p class="product-name">Little Miss Princess T-Shirt</p>
+					<p class="product-price">From €18,95</p>
+				</div>
+				<div class="product-item">
+					<img src="images/MRBRAVE_400x.webp" alt="photo Mr. Brave T-Shirt">
+					<p class="product-name">Mr. Brave T-Shirt</p>
+					<p class="product-price">From €18,95</p>
+				</div>
+				<div class="product-item">
+					<img src="images/MRTICKLE_400x.webp" alt="photo Mr. Tickle T-Shirt">
+					<p class="product-name">Mr. Tickle T-Shirt</p>
+					<p class="product-price">From €18,95</p>
+				</div>
+				<div class="product-item">
+					<img src="images/MRSTRONG_HOODIEGREY_400x.jpg" alt="photo Mr. Strong Organic Hoodie">
+					<p class="product-name">Mr. Strong Organic Hoodie</p>
+					<p class="product-price">From €42,95</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2> Recently viewed</h2>
+			<div class="product-grid">
+				<div class="product-item">
+					<img src="images/MRGRUMPY-STANDARD-MUG-MMLM_400x.webp" alt="photo Mr. Grumpy mug photo">
+					<p class="product-name">Mr. Grumpy Mug</p>
+					<p class="product-price">€12,95</p>
+				</div>
+				<div class="product-item">
+					<img src="images/LMSUNSHINE_400x.webp" alt="photo Little miss Sunshine shirt">
+					<p class="product-name">Little Miss Sunshine shirt</p>
+					<p class="product-price">From €18,95</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<p> All products on this site are manufactured and fulfilled by Star Edition Ltd, under license from MML.
+			</p>
+		</section>
+
+	</main>
+
+	<footer>
+		<!-- Logo and Copyright Section -->
+		<div class="footer-logo-copyright">
+			<img src="images/svg--logo.svg" alt="logo mrmen little miss">
+			<p>MR. MEN™ LITTLE MISS™ Copyright © 2024 THOIP (a Sanrio company). <br> All rights reserved.</p>
+		</div>
+
+		<!-- Social Media Links -->
+		<nav class="social-media">
+			<a href="https://www.facebook.com/mrmenlittlemiss/" target="_blank">
+				<img src="images/facebook.png" alt="Facebook">
+			</a>
+			<a href="https://x.com/mrmenofficial" target="_blank">
+				<img src="images/twitter.png" alt="X (Twitter)">
+			</a>
+			<a href="https://www.instagram.com/mrmenofficial/" target="_blank">
+				<img src="images/insta.png" alt="Instagram">
+			</a>
+			<a href="https://www.youtube.com/channel/UCjT4aTfoAbCdvc7Z_CplgCg" target="_blank">
+				<img src="images/youtube.png" alt="YouTube">
+			</a>
+		</nav>
+
+		<!-- Navigation Section with Collapsible Menu -->
+		<div class="navigation-container">
+			<button class="collapsible">NAVIGATE</button>
+		</div>
+
+		<div class="navigation-container">
+			<button class="collapsible">OTHER BITS</button>
+		</div>
+
+
+		<!-- Payment Methods Section -->
+		<section class="payment-methods">
+			<img src="images/amex.JPEG" alt="Amex">
+			<img src="images/applepay.JPEG" alt="Apple Pay">
+			<img src="images/discover.JPEG" alt="Discover">
+			<img src="images/googlepay.JPEG" alt="Google Pay">
+			<img src="images/ideal.JPEG" alt="Ideal">
+			<img src="images/maestro.JPEG" alt="maestro">
+			<img src="images/mastercard.JPEG" alt="master card">
+			<img src="images/paypal.JPEG" alt="PayPal">
+			<img src="images/unionpay.JPEG" alt="UnionPay">
+			<img src="images/shop.JPEG" alt="shop">
+			<img src="images/Visa.JPEG" alt="Visa">
+		</section>
+	</footer>
+
+
+	<script defer src="scripts/script.js"></script>
+
+</body>
+
+</html>

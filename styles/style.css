@@ -1,0 +1,911 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    /* startje */
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+}
+
+/* how to do dark mode: https://volodymyrzh.medium.com/implementing-dark-mode-with-css-and-javascript-fd3b2105e081*/
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+
+
+body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+p, h2, h3 {
+    margin-left: 0.3em;
+}
+
+/* Font size control buttons */
+
+.font-size-controls {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.font-size-controls button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 0.8em;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.font-size-controls button:hover {
+    background-color: #005bb5;
+}
+
+h3#DarkModetext,
+h3#DarkModetext+button,
+h3#DarkModetext+button+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+/* Ensuring the body becomes a flex container to vertically center the content */
+h3#DarkModetext {
+    flex-direction: column;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+
+
+/* sound */
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+audio {
+    width: 20em;
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+}
+
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: relative;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.5em;
+    width: 2em;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 1.5em;
+    height: 0.2em;
+    background-color: black;
+    border-radius: 0.1em;
+}
+
+/*hulp gevraagd van Chat GPT. Prompt: Hoe maak ik een hamburger menu zonder een png van het internet te halen*/
+
+/* Cart icon styling */
+.cart img {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+/* Ensuring proper spacing */
+.header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Sidebar (hidden initially) */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 2em;
+    transition: 0.3s ease;
+}
+
+/* Show sidebar */
+#sidebar.active {
+    left: 0;
+}
+
+/* Close button for the sidebar */
+#close-btn {
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    float: left;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.search-bar .search-btn {
+    padding: 0.5em;
+    background-color: #00AEEF;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Navigation Links */
+.menu-list {
+    list-style: none;
+    margin-top: 2em;
+}
+
+.menu-list li {
+    margin-bottom: 1em;
+}
+
+.menu-list a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+
+.menu-list a:hover {
+    text-decoration: underline;
+}
+
+
+.logo img {
+    width: 7em;
+    height: auto;
+}
+
+/* begin pagina*/
+
+body,
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 7em;
+    font-size: 1.7em;
+}
+
+h2 {
+    display: block;
+    Font-size: 1.4em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.heading_1 {
+    font-size: 2em;
+    line-height: 1;
+    Margin-bottom: 2em;
+    margin-top: 2em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.scaled-image {
+    transform: scale(3); 
+    transform-origin: center; 
+    margin-bottom: 7em;
+  }
+
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+}
+
+
+.characters img {
+    max-width: 13em;
+    height: auto;
+    display: block;
+}
+
+
+.heading_1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caroCarousel {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 300px;
+    justify-content: center;
+}
+
+.carousel-item {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.character-name {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.carousel-nav {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.carousel-nav.left {
+    left: 0;
+}
+
+.carousel-nav.right {
+    right: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2em;
+    margin-top: 2em;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.small-item {
+    width: 10em;
+    grid-column: span 1;
+    border-radius: 1em;
+}
+
+.large-item {
+    width: 22em;
+    grid-column: 1 / -1;
+    /* Span across both columns */
+    border-radius: 1em;
+}
+
+.small-item:nth-child(1) {
+    margin-right: -2em;
+}
+
+.small-item:nth-child(2) {
+    margin-left: -2em;
+}
+
+/* Main container for the news section */
+.news {
+    background-color: #fc5454;
+    padding: 3em 0; 
+    text-align: center;
+    position: relative;
+    margin-bottom: -2em;
+    margin-top: -1em;
+
+    display: flex;            
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header container for news image and heading */
+.news-header {
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+    gap: 0.5em; 
+    margin-bottom: 0.5em;
+    padding-left: 2em; 
+}
+
+/* Styling for the image */
+.news-header img {
+    width: 5em;  
+    height: auto;
+    margin-top: 0;  
+}
+
+/* Styling for the heading */
+.news-header h2 {
+    font-size: 5em;  
+    font-weight: bold;
+    color: #000;
+    margin: 0; 
+}
+
+/* New white box styling to wrap the carousel */
+.news-white-box {
+    padding: 2em; 
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Adjusted container styles */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 20em;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+/* Buttons styling for navigation */
+#prev-btn,
+#next-btn {
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color:#0056b3;  
+}
+
+/* Position the navigation buttons */
+#prev-btn {
+    left: 1em;  
+}
+
+#next-btn {
+    right: 1em;  
+}
+
+/* Updated carousel styling to show only one item */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;  
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+/* Ensure each item takes full width to display one at a time */
+.carousel-item {
+    min-width: 100%;  
+    flex-shrink: 0; 
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+.carousel-item p {
+    font-size: 1.4em; 
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    margin-top: 0.5em;
+}
+
+.content {
+    padding: 2em;
+    margin: 1em;
+}
+
+.product-info p {
+    font-size: 0.9em;
+}
+
+footer {
+    padding: 2em;
+    border-top: 0.06em solid #ddd;
+
+}
+
+footer h2 {
+    font-size: 1.5em;
+    ;
+    margin-bottom: 0.6em;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+
+/* shirt page */
+
+/* Center-align the personalized section */
+#personalisation-display {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 2em;
+}
+
+/* Style the placeholder text */
+#name-placeholder {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* Style the input field */
+#name-input {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.6em;
+    border: 0.07em solid #ccc;
+    border-radius: 0.3em;
+    width: 80%;
+    max-width: 25em;
+    margin-top: 2em;
+}
+
+/* Style the Roger Hargreaves signature */
+#personalisation-display img {
+    margin-top: 1em;
+    width: 9em;
+}
+
+/* Style for the character image */
+#character-image {
+    display: block;
+    margin: 2em auto;
+    width: 12em;
+}
+
+
+img[alt="main"] {
+    width: 25em;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+img[alt="thumbnail"] {
+    cursor: pointer;
+    border: 0.125em solid transparent;
+    border-radius: 0.5em;
+    transition: border-color 0.3s ease;
+    width: 3.5em;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.thumbnail-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+img[alt="thumbnail"]:hover,
+img[alt="thumbnail"].selected {
+    border-color: #0073e6;
+}
+
+/* Headings */
+h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.75em;
+}
+
+/* Size buttons and Color buttons */
+.size-buttons button,
+form button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    padding: 0.75em 1.5em;
+    margin: 0.25em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.size-buttons button:hover,
+form button:hover {
+    background-color: #e0e0e0;
+}
+
+.size-buttons button:focus,
+form button:focus,
+.size-buttons button.active,
+form button.active {
+    background-color: #e0f0ff;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+/* Price styling */
+#price {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-left: 0.5em;
+}
+
+/* Quantity buttons */
+#quantity {
+    text-align: center;
+    width: 3em;
+    height: 2.5em;
+    font-size: 0.7em;
+    border: 0.1em solid #ccc;
+    margin: 0 0.5em;
+}
+
+button[type="button"] {
+    background-color: white;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    padding: 0.5em 0.75em;
+    font-size: 0.9em;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 2em;
+}
+
+button[type="button"]:hover {
+    background-color: #f0f0f0;
+}
+
+button[type="button"]:active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Name input field */
+#name {
+    width: 10em;
+    padding: 0.75em;
+    margin: 0.75em 0;
+    font-size: 0.8em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+/* Add to cart button */
+#addToCart {
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+#addToCart:hover {
+    background-color: #0056b3;
+}
+
+/* Layout to match the uploaded image */
+section {
+    margin-bottom: 2em;
+}
+
+.price-section {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+#addToCart {
+    width: 10em;
+    background-color: #1e90ff;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    padding: 1em;
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+    box-shadow: 0 0.125em 0.625em rgba(0, 0, 0, 0.1);
+    max-width: 37.5em;
+    margin-right: auto;
+}
+
+/* Specific heading styling for <article> */
+article h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+    text-transform: uppercase;
+}
+
+article li {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0.625em 0;
+}
+
+/* Styling for the product grid container to make it scrollable */
+.product-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2em;
+    padding: 0 1em;
+    scroll-snap-type: x mandatory;
+}
+
+.product-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.product-item {
+    flex: 0 0 auto;
+    width: 12em;
+    text-align: center;
+    scroll-snap-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.product-name {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 0;
+}
+
+/* Footer Styling */
+footer {
+    padding: 2em;
+}
+
+.footer-logo-copyright p {
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+.footer-logo-copyright img {
+    align-items: start;
+    width: 10em;
+}
+
+.social-media {
+    display: flex;
+    justify-content: start;
+    gap: 0.3em;
+}
+
+/* Define the spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Initial styles for social media icons */
+.social-media a img {
+    width: 2.9em;
+    transition: transform 0.8s ease;
+    display: inline-block;
+    cursor: pointer;
+    animation: spin 3s ease-out;
+}
+
+
+/* asked chat GPT prompt */
+
+/* Container for the collapsible */
+.navigation-container {
+    border-top: 0.1em solid #ddd;
+    padding: 1em 0;
+}
+
+/* Styling the collapsible button */
+.collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5em 0;
+    outline: none;
+    position: relative;
+}
+
+/* Add the '+' symbol using a pseudo-element */
+.collapsible::after {
+    content: '+';
+    /* Adds the plus symbol */
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+    /* Smooth transition for rotation */
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+}
+
+/* Content area (hidden by default) */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+/* List styles for the navigation links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 1em 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.payment-methods img {
+    width: 2em;
+    height: 1.5em;
+    margin: 0.5em;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em 0;
+}
+

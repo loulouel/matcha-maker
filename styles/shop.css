@@ -1,0 +1,221 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+    box-sizing:border-box;  
+  }
+  
+  
+  
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+      /* startje */
+      --color-text:#111;
+      --color-background:#eee;
+  }
+  
+  
+  
+  
+  
+  /****************/
+  /* JOUW STYLING */
+  /****************/
+  
+  /* jouw code */
+  
+  
+  
+  /* Header styling */
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em; 
+      background-color: #fff;
+      position: relative;
+  }
+  
+  /* Hamburger Menu Styling */
+  .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 1.5em; 
+      width: 2em; 
+      border: none;
+      background: none;
+      cursor: pointer;
+  }
+  
+  .hamburger span {
+      display: block;
+      width: 1.5em;
+      height: 0.2em; 
+      background-color: black;
+      border-radius: 0.1em; 
+  }
+  
+  /*hulp gevraagd van Chat GPT. Prompt: Hoe maak ik een hamburger menu zonder een png van het internet te halen*/
+  
+  /* Cart icon styling */
+  .cart img {
+      height: 1.5em; 
+      width: 1.5em; 
+  }
+  
+  /* Ensuring proper spacing */
+  .header .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  /* Sidebar (hidden initially) */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    padding: 2em;
+    transition:  0.3s ease;
+}
+
+/* Show sidebar */
+#sidebar.active {
+    left: 0;
+}
+
+/* Close button for the sidebar */
+#close-btn {
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    float: left;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.search-bar .search-btn {
+    padding: 0.5em;
+    background-color: #00AEEF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Navigation Links */
+.menu-list {
+    list-style: none;
+    margin-top: 2em;
+}
+
+.menu-list li {
+    margin-bottom: 1em;
+}
+
+.menu-list a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+}
+
+.menu-list a:hover {
+    text-decoration: underline;
+}
+
+/* */
+
+
+.logo img {
+    width: 4em; 
+    height: auto; 
+}
+
+body, img {
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.4em;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+    gap: 1em; 
+
+.image-grid img {
+    width: 100%; 
+    height: auto; 
+
+.shop-button {
+    margin-top: 0.5em; 
+    padding: 0.5em 1em; 
+    background-color: rgb(0, 170, 255); 
+    color: white; 
+    border: none; 
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; 
+}
+
+.shop-button:hover {
+    background-color: rgb(86, 164, 213); 
+}
+
+/* Styles for the signed print image */
+.signed-print {
+    display: block;
+    margin-top: 1em ; 
+    margin-bottom: 1em;
+}
+
+/* Styles for the photos section */
+.photos {
+    display: grid;
+    gap: 1em; 
+    padding: 0 1em;
+}
+
+.photos img {
+    margin-bottom: 1em; 
+    max-width: 100%; 
+}
+
+.personalised-charactersingle {
+    position: relative;
+    padding: 0 2rem 1rem;
+    margin: 0 auto;
+    display: block;
+}
